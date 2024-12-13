@@ -36,6 +36,7 @@ public class Swapping {
         b = a+b-(a=b);
         System.out.println("The numbers after swapping are a="+a+" b="+b);
 
+        sc.close();
 
     }
 }

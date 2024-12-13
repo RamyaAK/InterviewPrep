@@ -27,5 +27,6 @@ public class StringReversal {
         StringBuffer sb = new StringBuffer(str2);
         sb.reverse();
         System.out.println(sb);
+        sc.close();
     }
 }

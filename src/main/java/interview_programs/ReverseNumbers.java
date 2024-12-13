@@ -34,6 +34,6 @@ public class ReverseNumbers {
         sbl.append(n);
         StringBuilder res = sbl.reverse();
         System.out.println("The reversed value is="+res);
-
+        sc.close();
     }
 }
