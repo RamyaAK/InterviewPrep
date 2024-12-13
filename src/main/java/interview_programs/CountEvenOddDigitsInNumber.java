@@ -3,34 +3,44 @@ package interview_programs;
 import java.util.Scanner;
 
 public class CountEvenOddDigitsInNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // This programs checks how many even and how many odd digits are present in the given number.
-
-        System.out.println("Enter a number:");
-        int number = sc.nextInt();
-
+    // Method to count even and odd digits
+    public int[] countEvenOddDigits(int number) {
         int evenCount = 0;
         int oddCount = 0;
+        if(number ==0){
+            return new int[] {1, 0};
+        }
 
         // Handle negative numbers
-        number = Math.abs(number); // This will convert the negative number to positive number.
+        number = Math.abs(number); // Convert to positive if number is negative
 
         while (number != 0) {
-            int digit = number % 10; //To Extract digits:The program repeatedly extracts the last digit of the number
+            int digit = number % 10; // Extract the last digit
 
-            if (digit % 2 == 0) { // check even or odd
+            if (digit % 2 == 0) { // Check if the digit is even
                 evenCount++;
             } else {
                 oddCount++;
             }
 
-            number /= 10; //To Remove the last digit: The number is divided by 10
+            number /= 10; // Remove the last digit
         }
 
-        System.out.println("Number of even digits: " + evenCount);
-        System.out.println("Number of odd digits: " + oddCount);
+        return new int[] {evenCount, oddCount}; // Return an array of [evenCount, oddCount]
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int number = sc.nextInt();
+
+        CountEvenOddDigitsInNumber counter = new CountEvenOddDigitsInNumber();
+        int[] result = counter.countEvenOddDigits(number);
+
+        System.out.println("Number of even digits: " + result[0]);
+        System.out.println("Number of odd digits: " + result[1]);
+
         sc.close();
     }
+
 }
