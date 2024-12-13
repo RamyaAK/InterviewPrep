@@ -1,6 +1,4 @@
 package interview_programs;
-
-
 import java.util.Scanner;
 
 public class ReverseNumbers {
