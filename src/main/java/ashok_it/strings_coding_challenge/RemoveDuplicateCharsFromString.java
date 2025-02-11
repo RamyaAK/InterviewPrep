@@ -1,6 +1,7 @@
 package ashok_it.strings_coding_challenge;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class RemoveDuplicateCharsFromString {
@@ -21,7 +22,7 @@ public class RemoveDuplicateCharsFromString {
 
 
         //Using LinkedHashSet
-        Set<Character> st = new HashSet<>();
+        Set<Character> st = new LinkedHashSet<>();
         for(int i=0;i< ch.length;i++){
             st.add(ch[i]);
         }
