@@ -10,12 +10,12 @@ public class DuplicateElementsInArray {
         int[] arr = {1,2,3,4,2,3,4,5,1,3,5,8,2,1,3};
         //to find duplicate number in an array with its count
 
-        HashSet<Integer> seen = new HashSet<>();
+        HashSet<Integer> unique = new HashSet<>();
         HashSet<Integer> duplicate = new HashSet<>();
-        //If it is not seen then it will be added into the hashset seen or else it will be added to the hashset duplicate.
+        //If it is not unique then it will be added into the hashset unique or else it will be added to the hashset duplicate.
 
         for (int i =0;i< arr.length;i++){
-            if(!seen.add(arr[i])){
+            if(!unique.add(arr[i])){
               duplicate.add(arr[i]);
             }
         }

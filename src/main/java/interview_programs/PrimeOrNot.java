@@ -22,7 +22,8 @@ public class PrimeOrNot {
         if(is_prime){
             System.out.println(n+" The given number is prime number");
         }
-        else System.out.println(n + " The given number is not a prime number");
-
+        else {
+            System.out.println(n + " The given number is not a prime number");
+        }
     }
 }
